@@ -1,13 +1,43 @@
+import { motion } from "framer-motion";
+
 const Nav = () => {
-  const navList = ["Home", "About", "Gallery", "Contact"];
+  const navVariant = {
+    hidden: {
+      x: "+100vw",
+    },
+    visible: {
+      x: 0,
+      transition: {
+        duration: 2,
+        when: "beforeChildren",
+        staggerChildren: 0.5,
+      },
+    },
+  };
+  const liVariant = {
+    hidden: {
+      display: "none",
+      y: 40,
+    },
+    visible: {
+      display: "block",
+      y: 0,
+    },
+  };
   return (
-    <div className="nav">
+    <motion.div
+      className="nav"
+      variants={navVariant}
+      initial="hidden"
+      animate="visible"
+    >
       <ul>
-        {navList.map((item) => {
-          return <li className={item}>{item}</li>;
-        })}
+        <motion.li variants={liVariant}>Home</motion.li>
+        <motion.li variants={liVariant}>About</motion.li>
+        <motion.li variants={liVariant}>Gallery</motion.li>
+        <motion.li variants={liVariant}>Contact</motion.li>
       </ul>
-    </div>
+    </motion.div>
   );
 };
 export default Nav;
