@@ -1,0 +1,37 @@
+#home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/pexels-quang-nguyen-vinh-2131801.jpg);
+  background-position: 50% 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 40%;
+  justify-content: flex-start;
+  padding-top: 4%;
+  letter-spacing: 20px;
+  overflow-y: hidden;
+  position: relative;
+  .home_h1 {
+    font-size: 10rem;
+    text-shadow: 2px 2px 4px rgb(251, 255, 0);
+    font-family: "Courgette", cursive;
+  }
+  span {
+    font-size: 10rem;
+    text-shadow: 2px 2px 4px rgb(7, 8, 0);
+
+    color: rgb(255, 111, 0);
+    font-family: "Rubik Moonrocks", cursive;
+  }
+}
+#homeCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 15%;
+  pointer-events: none;
+}

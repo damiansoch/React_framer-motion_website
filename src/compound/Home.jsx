@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import Deals from "./Deals";
+import "./styles/home.scss";
 
 const Home = () => {
   const coverVariants = {
@@ -29,15 +31,15 @@ const Home = () => {
 
   const spanVariant = {
     one: {
-      scale: 20,
+      scale: 10,
       opacity: 0,
     },
     two: {
       scale: 1,
       opacity: 1,
       transition: {
-        stiffness: 40,
-        type: "ineria",
+        type: "spring",
+        duration: 2,
         delay: 2,
       },
     },
@@ -45,12 +47,18 @@ const Home = () => {
   return (
     <>
       <div id="home">
-        <motion.h1 variants={h1Variant} initial="first" animate="second">
+        <motion.h1
+          className="home_h1"
+          variants={h1Variant}
+          initial="first"
+          animate="second"
+        >
           Travel <br />
         </motion.h1>
         <motion.span variants={spanVariant} initial="one" animate="two">
           HUB
         </motion.span>
+        <Deals />
       </div>
       <motion.div
         id="homeCover"

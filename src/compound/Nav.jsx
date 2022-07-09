@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "./styles/nav.scss";
 
 const Nav = () => {
   const navVariant = {
@@ -32,10 +33,30 @@ const Nav = () => {
       animate="visible"
     >
       <ul>
-        <motion.li variants={liVariant}>Home</motion.li>
-        <motion.li variants={liVariant}>About</motion.li>
-        <motion.li variants={liVariant}>Gallery</motion.li>
-        <motion.li variants={liVariant}>Contact</motion.li>
+        <motion.li
+          variants={liVariant}
+          whileHover={{ scale: 1.1, color: "red" }}
+        >
+          Home
+        </motion.li>
+        <motion.li
+          variants={liVariant}
+          whileHover={{ scale: 1.1, color: "red" }}
+        >
+          About
+        </motion.li>
+        <motion.li
+          variants={liVariant}
+          whileHover={{ scale: 1.1, color: "red" }}
+        >
+          Gallery
+        </motion.li>
+        <motion.li
+          variants={liVariant}
+          whileHover={{ scale: 1.1, color: "red" }}
+        >
+          Contact
+        </motion.li>
       </ul>
     </motion.div>
   );
