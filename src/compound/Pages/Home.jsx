@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import Deals from "./Deals";
-import "./styles/home.scss";
+import Deals from "../Deals";
+import "../styles/home.scss";
 
 const Home = () => {
+  //
   const coverVariants = {
     start: {
       opacity: "100%",

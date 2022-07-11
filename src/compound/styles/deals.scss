@@ -29,50 +29,5 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
-
-    .deal_card {
-      width: 20%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      background-color: rgba(0, 0, 0, 0.539);
-      border-radius: 10px;
-      cursor: pointer;
-      &:hover {
-        border: 1px solid rgba(255, 255, 255, 0.685);
-        transition: all 0.3 ease-in-out;
-      }
-
-      .card_title {
-        text-shadow: 1px 1px 1px rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
-        letter-spacing: 2px;
-        font-size: 2rem;
-        line-height: 20px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-      }
-      img {
-        width: 80%;
-      }
-      .price {
-        text-shadow: 1px 1px 1px rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
-        letter-spacing: 2px;
-        font-size: 2.5rem;
-        line-height: 25px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        text-align: center;
-        i {
-          color: red;
-          text-shadow: 0.5px 0.5px 1px white;
-          font-size: 3rem;
-        }
-      }
-    }
   }
 }
