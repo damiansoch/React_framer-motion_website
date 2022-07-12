@@ -6,13 +6,13 @@ import haiti from "../assets/dominican_republic.jpg";
 import dubai from "../assets/dubai.jpg";
 import las_vegas from "../assets/las_vegas.jpg";
 
-const DealCard = () => {
-  const images = [
-    { image: bahamas, title: "Bahamas" },
-    { image: haiti, title: "Haiti" },
-    { image: dubai, title: "Dubai" },
-    { image: las_vegas, title: "Las Vegas" },
-  ];
+const DealCard = (props) => {
+  // const images = [
+  //   { image: bahamas, title: "Bahamas" },
+  //   { image: haiti, title: "Haiti" },
+  //   { image: dubai, title: "Dubai" },
+  //   { image: las_vegas, title: "Las Vegas" },
+  // ];
 
   const cardVariant = {
     start: {
@@ -30,7 +30,7 @@ const DealCard = () => {
 
   return (
     <>
-      {images.map(({ title, image }) => {
+      {props.images.map(({ title, image }) => {
         console.log(image);
         return (
           <motion.div className="deal_card" variants={cardVariant} key={title}>
@@ -45,4 +45,5 @@ const DealCard = () => {
     </>
   );
 };
+
 export default DealCard;

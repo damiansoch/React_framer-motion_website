@@ -4,7 +4,8 @@ import DealCard from "./DealCard";
 
 import { motion } from "framer-motion";
 
-const Deals = () => {
+const Deals = (props) => {
+  console.log(props);
   const containerVariant = {
     start: {
       scale: 0,
@@ -29,7 +30,7 @@ const Deals = () => {
     >
       <h1 className="card_h1">This Weeks Best deals</h1>
       <div className="deals">
-        <DealCard />
+        <DealCard setPicture={props.setPicture} images={props.images} />
       </div>
     </motion.div>
   );
